@@ -8,7 +8,8 @@ class VimpyExamplePlugin(Plugin):
         print('VimpyExample :: Vim entered.')
 
     def vim_leave(self, data=None):
+        # Try changing this in the vim terminal before quitting.
+        # :let g:vimpy_example_left_message="Goodbye."
         left_message = settings['g:vimpy_example_left_message']
 
         print('VimpyExample :: {message}'.format(message=left_message))
-
