@@ -1,1 +1,6 @@
 *.pyc
+
+.*
+!.gitignore
+!.gitmodules
+!.gitslave
