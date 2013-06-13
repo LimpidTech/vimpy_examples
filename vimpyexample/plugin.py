@@ -1,7 +1,7 @@
 from vimpy.plugins import Plugin
-from vimpy.conf import settings
+from vimpy import variables
 
-settings['g:vimpy_example_left_message'] = 'Vim left.'
+variables.globals['vimpy_example_left_message'] = 'Vim left.'
 
 class VimpyExamplePlugin(Plugin):
     def vim_enter(self, data=None):
@@ -10,6 +10,6 @@ class VimpyExamplePlugin(Plugin):
     def vim_leave(self, data=None):
         # Try changing this in the vim terminal before quitting.
         # :let g:vimpy_example_left_message="Goodbye."
-        left_message = settings['g:vimpy_example_left_message']
+        left_message = variables.globals['vimpy_example_left_message']
 
         print('VimpyExample :: {message}'.format(message=left_message))
